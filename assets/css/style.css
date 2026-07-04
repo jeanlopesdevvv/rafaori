@@ -1352,9 +1352,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .footer__grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 48px;
-  margin-bottom: 48px;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 64px;
+  max-width: 1000px;
+  margin: 0 auto 48px;
 }
 .footer__brand {}
 .footer__logo {
@@ -1374,8 +1375,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .footer__tagline {
   font-size: 0.85rem;
   color: var(--text-muted);
-  line-height: 1.7;
-  max-width: 300px;
+  line-height: 1.8;
+  max-width: 460px;
   margin-bottom: 24px;
 }
 .footer__contact {}
