@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blog Jurídico do Dr. Rafael França — Artigos acessíveis e práticos sobre Direito Trabalhista, à Saúde, Imobiliário, do Consumidor e Bancário. Saiba seus direitos." />
+  <title>Blog Jurídico | Rafael França Advocacia</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo-escudo-goldsf.png" />
+  <link rel="apple-touch-icon" href="assets/images/logo-escudo-goldsf.png" />
+  <meta name="theme-color" content="#0A0F1E" />
+
+  <!-- Open Graph / Compartilhamento -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Blog Jurídico | Rafael França Advocacia" />
+  <meta property="og:description" content="Artigos práticos sobre seus direitos nas áreas Trabalhista, Saúde, Imobiliário, Bancário e Consumidor. Sem juridiquês." />
+  <meta property="og:url" content="https://rafaelfrancaadvocacia.com/blog.html" />
+  <meta property="og:image" content="https://rafaelfrancaadvocacia.com/assets/images/logo-escudo-goldsf.png" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header" class="header" role="banner">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo" aria-label="Rafael França Advocacia — Página Inicial">
+      <img src="assets/images/logo-escudo-goldsf.png" alt="Escudo Rafael França" class="header__logo-icon" />
+      <span class="header__logo-text">Rafael França <em>Advocacia</em></span>
+    </a>
+    <nav class="header__nav" id="main-nav" aria-label="Navegação principal">
+      <ul class="header__nav-list">
+        <li><a href="index.html#servicos" class="header__nav-link">Serviços</a></li>
+        <li><a href="index.html#areas-lp" class="header__nav-link">Áreas</a></li>
+        <li><a href="index.html#especialista" class="header__nav-link">O Advogado</a></li>
+        <li><a href="blog.html" class="header__nav-link" aria-current="page">Blog</a></li>
+        <li><a href="index.html#faq" class="header__nav-link">FAQ</a></li>
+      </ul>
+    </nav>
+    <a href="https://wa.me/message/267L3H22YEJVE1" class="btn btn--outline header__cta" target="_blank" rel="noopener noreferrer">Falar com o Advogado</a>
+    <a href="admin/index.html" class="header__admin-btn" aria-label="Painel Admin" title="Painel Admin">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu-overlay">
+      <span class="hamburger__bar"></span>
+      <span class="hamburger__bar"></span>
+      <span class="hamburger__bar"></span>
+    </button>
+  </div>
+  <div class="header__progress" aria-hidden="true"><div class="header__progress-bar" id="scroll-progress"></div></div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+  <div class="mobile-menu__top">
+    <a href="index.html" class="mobile-menu__logo mobile-menu__link">
+      <img src="assets/images/logo-escudo-goldsf.png" alt="" class="mobile-menu__logo-icon" />
+      <span class="mobile-menu__logo-text">Rafael França <em>Advocacia</em></span>
+    </a>
+    <button class="mobile-menu__close" id="mobile-menu-close" aria-label="Fechar menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu__divider"></div>
+  <nav class="mobile-menu__nav" aria-label="Menu mobile">
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item"><a href="index.html" class="mobile-menu__link"><span class="mobile-menu__item-num">01</span><span class="mobile-menu__item-label">Página Inicial</span><svg class="mobile-menu__item-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      <li class="mobile-menu__item"><a href="blog.html" class="mobile-menu__link"><span class="mobile-menu__item-num">02</span><span class="mobile-menu__item-label">Blog Jurídico</span><svg class="mobile-menu__item-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+    </ul>
+  </nav>
+  <div class="mobile-menu__bottom">
+    <a href="https://wa.me/message/267L3H22YEJVE1" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Falar com o Dr. Rafael</a>
+  </div>
+</div>
+
+<!-- BLOG HERO -->
+<section class="blog-hero" aria-labelledby="blog-hero-title">
+  <div class="container">
+    <div class="section__label">Blog Jurídico</div>
+    <h1 class="blog-hero__title" id="blog-hero-title">Seus Direitos, <em>Explicados</em></h1>
+    <p class="blog-hero__desc">Artigos acessíveis, sem juridiquês, escritos para quem precisa entender seus direitos e saber como agir. Novo conteúdo toda semana.</p>
+  </div>
+</section>
+
+<!-- BLOG MAIN -->
+<main class="blog-main" id="blog-main">
+  <div class="container">
+    <div class="blog-layout">
+
+      <!-- Posts Grid -->
+      <div>
+        <!-- Filtros de categoria -->
+        <div id="category-filters" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;" role="group" aria-label="Filtrar por categoria"></div>
+
+        <div class="blog-grid" id="blog-grid" role="list" aria-label="Artigos do blog"></div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="blog-sidebar" aria-label="Barra lateral do blog">
+        <div class="sidebar-widget sidebar-cta">
+          <h2 class="sidebar-widget__title">Tem Uma Dúvida Jurídica?</h2>
+          <p class="sidebar-cta__text">Consulta inicial gratuita, direta e sigilosa. O Dr. Rafael analisa seu caso sem compromisso.</p>
+          <a href="https://wa.me/message/267L3H22YEJVE1" class="btn btn--primary" target="_blank" rel="noopener noreferrer" style="width:100%;justify-content:center;">
+            <svg width="16" height="16" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"/></svg>
+            Falar no WhatsApp
+          </a>
+        </div>
+        <div class="sidebar-widget">
+          <h2 class="sidebar-widget__title">Artigos Recentes</h2>
+          <div id="recent-posts"></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__bottom" style="border-top:none;padding-top:0;">
+      <p class="footer__copy">© 2026 Rafael França Advocacia. Todos os direitos reservados.</p>
+      <a href="index.html" class="footer__nav-link">← Voltar ao Site Principal</a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/message/267L3H22YEJVE1" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"/></svg>
+</a>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/cms.js?v=3.0.0"></script>
+<script>
+(function() {
+  'use strict';
+  AOS.init({duration:700,easing:'ease-out-cubic',once:true,offset:60});
+
+  // Header scroll
+  const header = document.getElementById('header');
+  const progressBar = document.getElementById('scroll-progress');
+  window.addEventListener('scroll', function() {
+    if(header) header.classList.toggle('scrolled', window.scrollY > 40);
+    if(progressBar) {
+      const d = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = d > 0 ? (window.scrollY/d*100)+'%' : '0%';
+    }
+  }, {passive:true});
+
+  // Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu-overlay');
+  const mobileClose = document.getElementById('mobile-menu-close');
+  function openMenu(){if(!mobileMenu||!hamburger)return;mobileMenu.classList.add('is-open');mobileMenu.setAttribute('aria-hidden','false');hamburger.classList.add('is-open');hamburger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+  function closeMenu(){if(!mobileMenu||!hamburger)return;mobileMenu.classList.remove('is-open');mobileMenu.setAttribute('aria-hidden','true');hamburger.classList.remove('is-open');hamburger.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+  if(hamburger) hamburger.addEventListener('click', openMenu);
+  if(mobileClose) mobileClose.addEventListener('click', closeMenu);
+  document.addEventListener('keydown', function(e){if(e.key==='Escape'&&mobileMenu&&mobileMenu.classList.contains('is-open'))closeMenu();});
+
+  function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function fmtDate(d){try{return new Date(d).toLocaleDateString('pt-BR',{day:'2-digit',month:'long',year:'numeric'});}catch(_){return d||'';}}
+
+  function renderPosts(filter) {
+    const grid = document.getElementById('blog-grid');
+    if (!grid) return;
+    let posts = CMS.getPosts();
+    if (filter && filter !== 'all') posts = posts.filter(function(p){return (p.category||'').toLowerCase()===filter.toLowerCase();});
+    if (posts.length === 0) {
+      grid.innerHTML = '<div class="blog-empty"><div class="blog-empty__icon">📝</div><p>Nenhum artigo encontrado nesta categoria.</p></div>';
+      return;
+    }
+    grid.innerHTML = posts.map(function(p, i) {
+      const thumb = p.coverUrl ? '<div class="blog-card__thumb"><img src="'+esc(p.coverUrl)+'" alt="'+esc(p.coverAlt||p.title)+'" loading="lazy" /></div>' : '';
+      return '<article class="blog-card'+(i===0?' blog-card--featured':'')+'" role="listitem" data-aos="fade-up" data-aos-delay="'+(i*80)+'">' +
+        thumb +
+        '<div class="blog-card__body">' +
+        '<div class="blog-card__date">'+(esc(p.category||'Jurídico'))+' · '+fmtDate(p.date)+'</div>' +
+        '<h2 class="blog-card__title">'+esc(p.title)+'</h2>' +
+        '<p class="blog-card__excerpt">'+esc(p.excerpt)+'</p>' +
+        '<a href="post.html?id='+encodeURIComponent(p.id)+'" class="blog-card__read">Ler Artigo <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
+        '</div></article>';
+    }).join('');
+    if (typeof AOS !== 'undefined') AOS.refresh();
+  }
+
+  function renderFilters() {
+    const wrap = document.getElementById('category-filters');
+    if (!wrap) return;
+    const posts = CMS.getPosts();
+    const cats = ['all'].concat([...new Set(posts.map(function(p){return p.category||'Geral';}).filter(Boolean))]);
+    const labels = {all:'Todos'};
+    wrap.innerHTML = cats.map(function(c) {
+      return '<button onclick="filterPosts(\''+c+'\')" style="padding:8px 18px;border-radius:6px;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border:1px solid;transition:all 0.2s;" class="filter-btn" data-cat="'+c+'">'+esc(labels[c]||c)+'</button>';
+    }).join('');
+    styleFilters('all');
+  }
+
+  window.filterPosts = function(cat) {
+    renderPosts(cat);
+    styleFilters(cat);
+  };
+
+  function styleFilters(active) {
+    document.querySelectorAll('.filter-btn').forEach(function(btn) {
+      const isActive = btn.dataset.cat === active;
+      btn.style.background = isActive ? 'var(--emerald)' : 'transparent';
+      btn.style.borderColor = isActive ? 'var(--emerald)' : 'var(--navy-border)';
+      btn.style.color = isActive ? '#fff' : 'var(--text-muted)';
+    });
+  }
+
+  function renderRecent() {
+    const wrap = document.getElementById('recent-posts');
+    if (!wrap) return;
+    const posts = CMS.getPosts({limit:4});
+    wrap.innerHTML = posts.map(function(p) {
+      const thumb = p.coverUrl
+        ? '<div class="sidebar-recent-post__thumb"><img src="'+esc(p.coverUrl)+'" alt="" loading="lazy" /></div>'
+        : '<div class="sidebar-recent-post__thumb" style="background:var(--emerald-subtle);display:flex;align-items:center;justify-content:center;font-size:1.2rem;">📰</div>';
+      return '<a href="post.html?id='+encodeURIComponent(p.id)+'" class="sidebar-recent-post">' +
+        thumb +
+        '<div><div class="sidebar-recent-post__title">'+esc(p.title)+'</div><div class="sidebar-recent-post__date">'+fmtDate(p.date)+'</div></div>' +
+        '</a>';
+    }).join('');
+  }
+
+  renderFilters();
+  renderPosts();
+  renderRecent();
+})();
+</script>
+</body>
+</html>

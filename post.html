@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Leia artigos jurídicos práticos escritos pelo Dr. Rafael França sobre seus direitos trabalhistas, imobiliários, à saúde, do consumidor e bancários." />
+  <title id="page-title">Artigo | Rafael França Advocacia</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo-escudo-goldsf.png" />
+  <link rel="apple-touch-icon" href="assets/images/logo-escudo-goldsf.png" />
+  <meta name="theme-color" content="#0A0F1E" />
+
+  <!-- Open Graph / Compartilhamento -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Artigo Jurídico | Rafael França Advocacia" />
+  <meta property="og:description" content="Leia o artigo completo no blog da Rafael França Advocacia. Entenda seus direitos e saiba como agir." />
+  <meta property="og:url" content="https://rafaelfrancaadvocacia.com/post.html" />
+  <meta property="og:image" content="https://rafaelfrancaadvocacia.com/assets/images/logo-escudo-goldsf.png" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header id="header" class="header" role="banner">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo" aria-label="Rafael França Advocacia">
+      <img src="assets/images/logo-escudo-goldsf.png" alt="" class="header__logo-icon" />
+      <span class="header__logo-text">Rafael França <em>Advocacia</em></span>
+    </a>
+    <nav class="header__nav" aria-label="Navegação principal">
+      <ul class="header__nav-list">
+        <li><a href="index.html" class="header__nav-link">Início</a></li>
+        <li><a href="blog.html" class="header__nav-link" aria-current="page">Blog</a></li>
+        <li><a href="index.html#faq" class="header__nav-link">FAQ</a></li>
+      </ul>
+    </nav>
+    <a href="https://wa.me/message/267L3H22YEJVE1" class="btn btn--outline header__cta" target="_blank" rel="noopener noreferrer">Falar com o Advogado</a>
+  </div>
+  <div class="header__progress" aria-hidden="true"><div class="header__progress-bar" id="scroll-progress"></div></div>
+</header>
+
+<div id="post-wrapper">
+  <!-- Preenchido pelo JS -->
+</div>
+
+<a href="https://wa.me/message/267L3H22YEJVE1" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"/></svg>
+</a>
+
+<script src="js/cms.js?v=3.0.0"></script>
+<script>
+(function() {
+  'use strict';
+
+  // Header scroll
+  const header = document.getElementById('header');
+  const progressBar = document.getElementById('scroll-progress');
+  window.addEventListener('scroll', function() {
+    if(header) header.classList.toggle('scrolled', window.scrollY > 40);
+    if(progressBar) {
+      const d = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = d > 0 ? (window.scrollY/d*100)+'%' : '0%';
+    }
+  }, {passive:true});
+
+  function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function fmtDate(d){try{return new Date(d).toLocaleDateString('pt-BR',{day:'2-digit',month:'long',year:'numeric'});}catch(_){return d||'';}}
+
+  const params = new URLSearchParams(window.location.search);
+  const postId = params.get('id');
+  const wrapper = document.getElementById('post-wrapper');
+
+  if (!postId) {
+    wrapper.innerHTML = '<div class="container" style="padding:120px 24px 80px;text-align:center;"><h1 style="font-family:var(--font-serif);color:var(--text-light);">Artigo não encontrado</h1><a href="blog.html" class="btn btn--outline" style="margin-top:24px;display:inline-flex;">← Voltar ao Blog</a></div>';
+  } else {
+    const post = CMS.getPost(postId);
+    if (!post) {
+      wrapper.innerHTML = '<div class="container" style="padding:120px 24px 80px;text-align:center;"><h1 style="font-family:var(--font-serif);color:var(--text-light);">Artigo não encontrado</h1><a href="blog.html" class="btn btn--outline" style="margin-top:24px;display:inline-flex;">← Voltar ao Blog</a></div>';
+    } else {
+      document.title = esc(post.title) + ' | Rafael França Advocacia';
+
+      // Atualizar meta tags dinamicamente no DOM
+      try {
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute('content', esc(post.excerpt || ''));
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute('content', esc(post.title) + ' | Rafael França Advocacia');
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute('content', esc(post.excerpt || ''));
+        const ogImage = document.querySelector('meta[property="og:image"]');
+        if (ogImage && post.coverUrl) ogImage.setAttribute('content', esc(post.coverUrl));
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute('content', window.location.href);
+      } catch (e) { console.error('Erro ao atualizar meta tags dinâmicas:', e); }
+
+      const cover = post.coverUrl
+        ? '<div class="post-hero__cover"><img src="'+esc(post.coverUrl)+'" alt="'+esc(post.coverAlt||post.title)+'" /></div>'
+        : '';
+
+      wrapper.innerHTML =
+        '<section class="post-hero"><div class="container">'+
+        '<a href="blog.html" class="post-back"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Voltar ao Blog</a>'+
+        '<div class="post-meta">'+
+        '<span class="post-meta__category">'+esc(post.category||'Jurídico')+'</span>'+
+        '<span class="post-meta__date"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>'+fmtDate(post.date)+'</span>'+
+        '</div>'+
+        '<h1 class="post-hero__title">'+esc(post.title)+'</h1>'+
+        cover +
+        '</div></section>'+
+        '<div class="container" style="padding-top:60px;padding-bottom:80px;">'+
+        '<div class="post-layout">'+
+        '<div class="post-content">'+
+        (post.content || '<p>Conteúdo não disponível.</p>')+
+        '</div>'+
+        '<aside class="blog-sidebar">'+
+        '<div class="sidebar-widget sidebar-cta">'+
+        '<h2 class="sidebar-widget__title">Tem Uma Dúvida?</h2>'+
+        '<p class="sidebar-cta__text">Consulta inicial gratuita com o Dr. Rafael França. Análise direta e sigilosa do seu caso.</p>'+
+        '<a href="https://wa.me/message/267L3H22YEJVE1" class="btn btn--primary" target="_blank" rel="noopener noreferrer" style="width:100%;justify-content:center;"><svg width="16" height="16" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"/></svg> Falar no WhatsApp</a>'+
+        '</div>'+
+        '</aside>'+
+        '</div>'+
+        '</div>';
+    }
+  }
+})();
+</script>
+</body>
+</html>
